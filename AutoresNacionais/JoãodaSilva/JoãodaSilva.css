@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffde9e;
+    color: #341f1f;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #341f1f;
+}
+
+.about-author {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.author-bio img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-bio p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #341f1f;
+}
+
+.works {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.works-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.work {
+    text-align: center;
+    width: 200px;
+}
+
+.work img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.work img:hover {
+    transform: scale(1.05);
+}
+
+.work h3 {
+    margin-top: 10px;
+    color: #341f1f;
+    font-size: 18px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #341f1f;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #341f1f;
+}
+.logo {
+    display: flex; /* Flexbox para facilitar o alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    padding: 10px; /* Espaçamento ao redor da logo */
+    background-color: #ffde9e; /* Cor de fundo combinando com o esquema do site */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.logo img {
+    max-width: 200px; /* Tamanho máximo da logo */
+    height: auto; /* Mantém a proporção */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao hover */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Pipoca e Chocolate - Resenhas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png.svg" alt="Logo do site">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./resenhas.html">Resenhas</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Entre em Contato</h1>
+        <form id="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('y7JAu2QWq2fIkH5hc');
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_3d0j0yn', 'template_ofoyvju', this)
+                .then(function () {
+                    alert('Mensagem enviada com sucesso!');
+                }, function (error) {
+                    alert('Ocorreu um erro ao enviar a mensagem: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
+
+</html>

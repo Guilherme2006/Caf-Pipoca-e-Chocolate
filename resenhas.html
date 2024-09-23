@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Pipoca e Chocolate - Resenhas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png.svg" alt="Logo do site">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./resenhas.html">Resenhas</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+            <div class="search-bar" style="animation: fadeInUp 1.5s;">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
+            </div>
+        </nav>
+    </header>
+
+    <main style="animation: fadeInUp 1s;">
+        <h1>Lista de Resenhas</h1>
+        <div class="resenhas-one" id="resenha-list" style="animation: fadeInUp 1.5s;">
+            <div class="resenha-tipo">
+                <a href="./resenha-livro1.html">
+                    <img src="./images/capadolivro1.jpg" alt="Capa do Livro 1">
+                    <p>Harry Potter e a Pedra Filosofal</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro2.html">
+                    <img src="./images/capadolivro2.jpg" alt="Capa do Livro 2">
+                    <p>Harry Potter e a Câmara Secreta</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro3.html">
+                    <img src="./images/capadolivro3.jpg" alt="Capa do Livro 3">
+                    <p>Luz latente sobre o subterrâneo dos anti-humanos vol 1</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('search-input').addEventListener('input', function () {
+            var searchTerm = this.value.toLowerCase();
+            var resenhaItems = document.querySelectorAll('.resenha-tipo');
+
+            resenhaItems.forEach(function (item) {
+                var text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
