@@ -120,3 +120,5 @@ function mostrarAutores(tipo) {
 
     autoresContainer.style.display = 'flex';
 }
+
+

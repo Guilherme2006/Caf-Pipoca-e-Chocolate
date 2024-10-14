@@ -115,12 +115,40 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.logo img {
-    max-width: 200px; /* Tamanho máximo da logo */
-    height: auto; /* Mantém a proporção */
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao hover */
+.logo-ribbon {
+    display: inline-block;
+    background-color: #ffde9e; /* Cor de fundo da fita */
+    padding: 10px 20px;
+    border: 4px solid #341f1f; /* Borda da fita */
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efeito de sombra para dar profundidade */
 }
 
-.logo img:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+.logo-ribbon:before,
+.logo-ribbon:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ffde9e; /* Cor da fita */
+    border: 4px solid #341f1f; /* Borda da fita */
+    border-radius: 50%; /* Deixa as pontas redondas como um laço */
 }
+
+.logo-ribbon:before {
+    left: -30px;
+}
+
+.logo-ribbon:after {
+    right: -30px;
+}
+
+.logo-text {
+    font-size: 24px;
+    color: #341f1f;
+    font-weight: bold;
+}
+

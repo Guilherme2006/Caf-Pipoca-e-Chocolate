@@ -28,7 +28,7 @@
 
     <main style="animation: fadeInUp 1s;">
         <h1>Lista de Resenhas</h1>
-        <div class="resenhas-one" id="resenha-list" style="animation: fadeInUp 1.5s;">
+        <div class="resenhas-grid" id="resenha-list" style="animation: fadeInUp 1.5s;">
             <div class="resenha-tipo">
                 <a href="./resenha-livro1.html">
                     <img src="./images/capadolivro1.jpg" alt="Capa do Livro 1">
@@ -47,23 +47,88 @@
                     <p>Luz latente sobre o subterrâneo dos anti-humanos vol 1</p>
                 </a>
             </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro4.html">
+                    <img src="./images/capadolivro4.jpg" alt="Capa do Livro 4">
+                    <p>Cuidado com o que vem das Águas</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro5.html">
+                    <img src="./images/capadolivro5.jpg" alt="Capa do Livro 5">
+                    <p>O Poderoso Chefão</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro6.html">
+                    <img src="./images/capadolivro6.jpg" alt="Capa do Livro 6">
+                    <p>Harry Potter e o Prisioneiro de Azkaban</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro7.html">
+                    <img src="./images/corte-de-nevoa-e-furia.png" alt="capa do livro 7">
+                    <p>corte de nevoa e furia</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro8.html">
+                    <img src="./images/um-paraiso-para-dante.png" alt="Capa do Livro 8">
+                    <p>Um um paraiso para Dante</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro9.html">
+                    <img src="./images/para-casar-com-um-capitao.jpg" alt="Capa do Livro 9">
+                    <p>Para Casar com um Capitão</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro10.html">
+                    <img src="./images/Dom-Quixote.png" alt="Dom Quixote">
+                    <p>Dom Quixote</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro11.html">
+                    <img src="./images/corte-de-Asas-e-Ruina.jpg" alt="Corte de Asas e Ruina">
+                    <p>Corte de Asas e Ruina</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro12.html">
+                    <img src="./images/o-rei-da-terra-do-nunca.jpg" alt="O rei da terra do Nunca">
+                    <p>O rei da terra do Nunca</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro13.html">
+                    <img src="./images/Verity.jpg" alt="Verity">
+                    <p>Verity</p>
+                </a>
+            </div>
+            <div class="resenha-tipo">
+                <a href="./resenha-livro14.html">
+                    <img src="./images/corte-de-Asas-e-Ruina.jpg" alt="Corte de Asas e Ruina">
+                    <p>Corte de Asas e Ruina</p>
+                </a>
+            </div>
         </div>
-    </main>
-
+    </main>  
     <script>
-        document.getElementById('search-input').addEventListener('input', function () {
+            document.getElementById('search-input').addEventListener('input', function () {
             var searchTerm = this.value.toLowerCase();
             var resenhaItems = document.querySelectorAll('.resenha-tipo');
 
             resenhaItems.forEach(function (item) {
-                var text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+            var text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+            item.style.display = 'block';
+            } else {
+            item.style.display = 'none';
+            }
             });
-        });
+            });
     </script>
 </body>
 </html>
