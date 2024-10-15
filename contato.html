@@ -38,16 +38,19 @@
         </form>
     </main>
 
+    <!-- Script do EmailJS -->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        // Inicializar EmailJS com sua Public Key
         (function () {
-            emailjs.init('y7JAu2QWq2fIkH5hc');
+            emailjs.init('blI8cJkOP5gKIbZZC'); // Substitua por sua Public Key correta
         })();
 
+        // Enviar o formulário usando EmailJS
         document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevenir o comportamento padrão do formulário
 
-            emailjs.sendForm('service_3d0j0yn', 'template_ofoyvju', this)
+            emailjs.sendForm('service_3d0j0yn', 'template_ofoyvju', this) // Substitua pelos seus IDs
                 .then(function () {
                     alert('Mensagem enviada com sucesso!');
                 }, function (error) {
@@ -56,5 +59,4 @@
         });
     </script>
 </body>
-
 </html>

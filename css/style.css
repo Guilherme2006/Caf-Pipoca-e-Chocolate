@@ -42,6 +42,151 @@ nav ul li a {
 nav ul li a:hover {
     color: #341f1f;
 }
+/*Videos*/
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Colunas automáticas com mínimo de 250px */
+    gap: 20px; /* Espaçamento entre os vídeos */
+    justify-items: center; /* Centraliza os itens na grade */
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta para múltiplas colunas */
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.video-item {
+    position: relative;
+    width: 250px; /* Largura fixa */
+    height: 500px; /* Altura fixa para formato vertical (Shorts) */
+    overflow: hidden;
+    border-radius: 15px; /* Borda arredondada */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; /* Fundo branco */
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir o container */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.video-item:hover .video-overlay {
+    opacity: 0; /* Some a camada do título quando o mouse passa */
+}
+.h5{
+    color: #e5e5e5;
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        width: 200px;
+        height: 400px; /* Ajusta o tamanho dos vídeos para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        width: 150px;
+        height: 300px; /* Ajusta ainda mais para dispositivos móveis */
+    }
+
+    .video-overlay {
+        font-size: 1em; /* Diminui o tamanho do texto do título */
+    }
+}
+/* Responsivo para telas grandes */
+@media (min-width: 1024px) {
+    .video-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Aumenta a largura mínima para telas maiores */
+    }
+}
+
+/* Desafios Literários */
+.desafios-literarios {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.desafios-literarios h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.desafios-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.desafio-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.desafio-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.desafio-item h3 {
+    font-size: 1.5em;
+    color: #444;
+    margin-top: 15px;
+}
+
+.desafio-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.botao-desafio {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.botao-desafio:hover {
+    background-color: #ff4500;
+}
+
 .logo {
     display: flex; /* Flexbox para facilitar o alinhamento */
     justify-content: center; /* Centraliza horizontalmente */
@@ -262,10 +407,10 @@ nav ul li:hover .sub-menu {
 }
 
 .carousel-item {
-    flex: 0 0 20%;
-    width: 20%;
+    flex: 0 0 15%;
+    width: 15%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 2px;
     text-align: center;
 }
 
@@ -309,6 +454,10 @@ nav ul li:hover .sub-menu {
 
 .next-btn {
     right: 10px;
+}
+
+.no-style{
+    text-decoration: none;
 }
 
 
